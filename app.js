@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false })); // next in the end so it will enter middleware in line
 
-app.use(adminRoutes);
+app.use('/admin' , adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {

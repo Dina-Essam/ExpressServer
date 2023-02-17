@@ -11,7 +11,7 @@ main {
 .main-header {
     width: 100%;
     height: 3.5rem;
-    background-color: #edeb95;
+    background-color: #1589b7;
     padding: 0 1.5rem;
 }
 
@@ -35,7 +35,7 @@ main {
 
 .main-header__item a {
     text-decoration: none;
-    color: #dcd95b;
+    color: #1a5b74;
 }
 
 .main-header__item a:hover,

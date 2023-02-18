@@ -16,12 +16,14 @@ module.exports.postAddProduct = (req, res, next) => {
 };
 
 module.exports.getProducts = (req, res, next) => {
-  res.render("shop", {
-    products: Product.fetchAll(),
-    path: req.originalUrl,
-    hasProducts: Product.fetchAll().length > 0,
-    path: "/",
-    activeShop: true,
-    productCss: true,
-  });
+  Product.fetchAll( products => {
+    res.render("shop", {
+      products: products,
+      path: req.originalUrl,
+      hasProducts: products.length > 0,
+      path: "/",
+      activeShop: true,
+      productCss: true,
+    });
+  })
 };
